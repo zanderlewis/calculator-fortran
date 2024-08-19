@@ -9,7 +9,7 @@ cd calculator-fortran
 ```
 2. Run the following commands:
 ```bash
-gfortran calculator.f95 -o calculator
+gfortran calculator.f90 -o calculator
 ./calculator
 ```
 3. Follow the on-screen instructions to use the calculator.
