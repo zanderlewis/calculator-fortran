@@ -7,14 +7,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+        project: calculator
+        file: calculator.f90
     steps:
     - uses: actions/checkout@v2
     - name: Install gfortran
       run: sudo apt-get install gfortran
     - name: Build Fortran Code
-      run: gfortran -o calculator calculator.f90
+      run: gfortran -o ${{ env.project }} ${{ env.file }}
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        path: calculator
-        name: calculator
+        path: ${{ env.project }}
+        name: ${{ env.project }}
