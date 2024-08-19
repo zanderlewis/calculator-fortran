@@ -1,5 +1,6 @@
 program calculator
     implicit none
+    ! Define variables
     character(len=1) :: operator
     real :: num1, num2, result
     character(len=20) :: result_str
@@ -7,7 +8,9 @@ program calculator
     character(len=*), parameter :: red = char(27) // '[31m'
     character(len=*), parameter :: yellow = char(27) // '[33m'
     character(len=*), parameter :: green = char(27) // '[32m'
+    ! End of variable definition
 
+    ! Main program
     print *, yellow // 'Enter first number: ' // reset
     read *, num1
     print *, yellow // 'Enter operator (+, -, *, /): ' // reset
@@ -34,4 +37,5 @@ program calculator
 
     write(result_str, '(F6.2)') result
     print *, green // 'Result: ' // trim(result_str) // reset
+    ! End of main program
 end program calculator
