@@ -25,7 +25,7 @@ character(len=*), parameter :: red = char(27) // '[31m'
 character(len=*), parameter :: yellow = char(27) // '[33m'
 character(len=*), parameter :: green = char(27) // '[32m'
 ```
-These lines define the colours used in the output of the program.
+^ These lines define the colours used in the output of the program. ^
 
 ```fortran
 print *, yellow // 'Enter first number: ' // reset
@@ -35,7 +35,7 @@ read *, operator
 print *, yellow // 'Enter second number: ' // reset
 read *, num2
 ```
-These lines prompt the user to enter the first number, operator, and second number.
+^ These lines prompt the user to enter the first number, operator, and second number. ^
 
 ```fortran
 if (operator == '+') then
@@ -56,10 +56,10 @@ else
     stop
 end if
 ```
-These lines calculate the result based on the operator entered by the user.
+^ These lines calculate the result based on the operator entered by the user. ^
 
 ```fortran
 write(result_str, '(F6.2)') result
 print *, green // 'Result: ' // trim(result_str) // reset
 ```
-These lines format and print the result to the console.
+^ These lines format and print the result to the console. ^
