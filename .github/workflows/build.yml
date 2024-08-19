@@ -1,0 +1,20 @@
+# Github action to install gfortran and build the Fortran code and make an executable an artifact
+name: Build Fortran Code
+on:
+    push:
+        paths:
+            - '**/*.f90'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install gfortran
+      run: sudo apt-get install gfortran
+    - name: Build Fortran Code
+      run: gfortran -o calculator calculator.f90
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: calculator
+        name: calculator
