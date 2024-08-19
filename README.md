@@ -1,6 +1,8 @@
 # calculator-fortran
 A simple calculator I created in Fortran
 
+[![Build Fortran Code](https://github.com/zanderlewis/calculator-fortran/actions/workflows/build.yml/badge.svg)](https://github.com/zanderlewis/calculator-fortran/actions/workflows/build.yml)
+
 ## How to run
 1. Clone the repository:
 ```bash
